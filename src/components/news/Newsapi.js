@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 function NewsApi() {
   const [news, setNews] = useState([]);
 
-  useEffect(async () => {
-    await axios
+  useEffect( () => {
+     axios
       .get(
         "https://newsapi.org/v2/everything?qInTitle=crypto&sortBy=popularity&apiKey=ed82c3c548024e7bb58f1a4e07ac26b1"
       )

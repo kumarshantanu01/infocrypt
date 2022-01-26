@@ -6,7 +6,7 @@ function Navbar() {
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="">
+          <a class="navbar-brand" href="demo">
             Navbar
           </a>
           <button
@@ -24,14 +24,14 @@ function Navbar() {
             <ul class="navbar-nav">
               <li class="nav-item">
                 <Link to="/">
-                  <a class="nav-link active" aria-current="page" href="#">
+                  <a class="nav-link active" aria-current="page" href="demo">
                     Home
                   </a>
                 </Link>
               </li>
               <li class="nav-item">
                 <Link to="/news">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="demo">
                     News
                   </a>
                 </Link>
