@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import NewsApi from "../components/news/Newsapi";
 
 function News() {
-  return <div>
+  return (
+    <div>
       <h1>News page</h1>
-  </div>;
+      <NewsApi />
+    </div>
+  );
 }
 
 export default News;
