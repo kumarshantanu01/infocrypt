@@ -7,7 +7,7 @@ function Navbar() {
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="demo">
-            Navbar
+            InfoCrypt
           </a>
           <button
             class="navbar-toggler"
@@ -28,8 +28,8 @@ function Navbar() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/news">
-                  News
+                <Link class="nav-link active" aria-current="page" to="/live">
+                  Live Crypto
                 </Link>
               </li>
             </ul>

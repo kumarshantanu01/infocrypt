@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import News from "./pages/News";
+import Live from "./pages/Live";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/news" component={News} />
+        <Route exact path="/live" component={Live} />
       </Switch>
       <Footer />
     </BrowserRouter>

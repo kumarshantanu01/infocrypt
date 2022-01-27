@@ -24,11 +24,11 @@ function NewsApi() {
   useEffect(() => {
     const fetchNews = async () => {
       const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
+        "https://newsdata.io/api/1/news?apikey=pub_40386eb420e308399a3d2ba448eb31a1982d&qInTitle=crypto&language=en"
       );
 
-      console.log(data);
-      setNews(data);
+      console.log(data.results);
+      setNews(data.results);
     }
 
     fetchNews();
@@ -47,29 +47,29 @@ function NewsApi() {
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img
-                      src={value.urlToImage}
+                      src={value.image_url}
                       className="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h5 className="card-title">{value.email}</h5>
+                      <h5 className="card-title">{value.title}</h5>
                       <p className="card-text">
                         <small className="text-muted">
                           {value.description}
                         </small>
                       </p>
-                      <p className="card-text">{value.content}</p>
+                      {/* <p className="card-text">{value.content}</p> */}
                       <button className="btn btn-info">
-                        <a href={value.url} target="blank">
+                        <a href={value.link} target="blank">
                           Read More
                         </a>
                       </button>
                       <p className="card-text">
                         <small className="text-muted ">
-                          {value.author}
-                          <p>Published on :{value.publishedAt}</p>
+                          {value.creator}
+                          <p>Published on :{value.pubDate}</p>
                         </small>
                       </p>
                     </div>
