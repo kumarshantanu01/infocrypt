@@ -1,23 +1,38 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function NewsApi() {
+  // const [news, setNews] = useState([]);
+
+  // async function asyncFunc() {
+  //   try {
+  //     const response = await axios.get(
+  //       "https://newsapi.org/v2/everything?qInTitle=crypto&sortBy=popularity&apiKey=ed82c3c548024e7bb58f1a4e07ac26b1"
+  //     );
+
+  //     console.log(response);
+  //     setNews(response.data.articles);
+  //   } catch (error) {
+  //     console.log("error", error);
+  //   }
+  // }
+
+  // asyncFunc();
+
   const [news, setNews] = useState([]);
 
-  async function asyncFunc() {
-    try {
-      const response = await axios.get(
+  useEffect(() => {
+    const fetchNews = async () => {
+      const { data } = await axios.get(
         "https://newsapi.org/v2/everything?qInTitle=crypto&sortBy=popularity&apiKey=ed82c3c548024e7bb58f1a4e07ac26b1"
       );
 
-      console.log(response);
-      setNews(response.data.articles);
-    } catch (error) {
-      console.log("error", error);
+      console.log(data.articles);
+      setNews(data.articles);
     }
-  }
 
-  asyncFunc();
+    fetchNews();
+  }, []);
 
   return (
     <>
