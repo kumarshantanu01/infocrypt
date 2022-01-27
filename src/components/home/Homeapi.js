@@ -24,11 +24,11 @@ function NewsApi() {
   useEffect(() => {
     const fetchNews = async () => {
       const { data } = await axios.get(
-        "https://newsapi.org/v2/everything?qInTitle=crypto&sortBy=popularity&apiKey=ed82c3c548024e7bb58f1a4e07ac26b1"
+        "https://jsonplaceholder.typicode.com/users"
       );
 
-      console.log(data.articles);
-      setNews(data.articles);
+      console.log(data);
+      setNews(data);
     }
 
     fetchNews();
@@ -54,7 +54,7 @@ function NewsApi() {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h5 className="card-title">{value.title}</h5>
+                      <h5 className="card-title">{value.email}</h5>
                       <p className="card-text">
                         <small className="text-muted">
                           {value.description}
