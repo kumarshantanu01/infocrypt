@@ -3,7 +3,7 @@ import NewsApi from "../components/home/Homeapi";
 
 function Home() {
   return (
-    <div>
+    <div >
       <NewsApi/>
     </div>
   );

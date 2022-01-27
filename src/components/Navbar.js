@@ -6,9 +6,9 @@ function Navbar() {
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="demo">
-            InfoCrypt
-          </a>
+          <Link class="nav-link active" aria-current="page" to="/">
+            <h5>InfoCrypt</h5>
+          </Link>
           <button
             class="navbar-toggler"
             type="button"

@@ -36,7 +36,7 @@ function NewsApi() {
 
   return (
     <>
-      <div className="container mt-4">
+      <div className="container  mt-4">
         <div className=" text-center">
           <h3>News articles related to crypto </h3>
         </div>
