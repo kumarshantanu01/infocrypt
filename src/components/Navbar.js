@@ -28,8 +28,8 @@ function Navbar() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/">
-                  Home
+                <Link class="nav-link active" aria-current="page" to="/prices">
+                  Prices
                 </Link>
               </li>
             </ul>
