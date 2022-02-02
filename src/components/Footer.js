@@ -1,28 +1,45 @@
+import { makeStyles } from "@mui/styles";
 import React from "react";
+const useStyles = makeStyles({
+  footer: {
+    height: "11rem",
+    backgroundColor: "#D2D0D0",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    padding: "1rem",
+  },
+  footerheading: {
+    fontSize: "30px",
+    fontFamily: "",
+    fontWeight: "bold",
+  },
+  footersubheading: {
+    fontSize: "20px",
+    color: "#444545",
+    fontWeight: "400",
+  },
+  footercopyright: {
+    fontWeight: "100",
+    fontSize: "18px",
+    paddingTop: "1rem",
+  },
+});
 
 function Footer() {
+  const classes = useStyles();
   return (
     <div>
-      <footer class="page-footer bg-secondary font-small panel-primary">
-        <div class="container">
-          <ul class="list-unstyled list-inline text-center py-2">
-            <li class="list-inline-item">
-              <h5 class="mb-1">Register for free</h5>
-            </li>
-            <li class="list-inline-item">
-              <a href="#!" class="btn bg-info  btn-rounded">
-                Sign up!
-              </a>
-            </li>
-          </ul>
-        </div>
-        
-
-        <div class="footer-copyright text-center py-3">
-          © 2022 Copyright
-          
-        </div>
-      </footer>
+      <div className={classes.footer}>
+        <h1 className={classes.footerheading}>InfoCrypt</h1>
+        <h2 className={classes.footersubheading}>
+          Your one stop solution for live price and latest news related to
+          crypto.
+        </h2>
+        <h4 className={classes.footercopyright}>© 2022 Copyright</h4>
+      </div>
     </div>
   );
 }
