@@ -3,7 +3,7 @@ import React from "react";
 const useStyles = makeStyles({
   footer: {
     height: "11rem",
-    backgroundColor: "#D2D0D0",
+    backgroundColor: "#212529",
     width: "100%",
     display: "flex",
     alignItems: "center",
@@ -15,16 +15,19 @@ const useStyles = makeStyles({
     fontSize: "30px",
     fontFamily: "",
     fontWeight: "bold",
+    color: "#DD759F",
+    opacity: 0.8,
   },
   footersubheading: {
     fontSize: "20px",
-    color: "#444545",
+    color: "#f2f2f2",
     fontWeight: "400",
   },
   footercopyright: {
     fontWeight: "100",
     fontSize: "18px",
     paddingTop: "1rem",
+    color: "#f2f2f2",
   },
 });
 
