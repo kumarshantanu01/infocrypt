@@ -1,8 +1,10 @@
+import { makeStyles } from "@mui/styles";
 import React, { useEffect, useState } from "react";
 import Coincard from './Coincard';
 
 // import axios from "axios";
 function Cryptoprice() {
+  const classes = useStyles();
   const [coins, setCoins] = useState();
   const [dataisloaded, setDataisloaded] = useState(false);
 
@@ -36,7 +38,7 @@ function Cryptoprice() {
   return (
     <div>
       <h1>live prices will be displayed here</h1>
-      <div>
+      <div >
         <Coincard coins={coins} dataisloaded={dataisloaded} />
       </div>
     </div>
@@ -44,3 +46,8 @@ function Cryptoprice() {
 }
 
 export default Cryptoprice;
+
+
+const useStyles = makeStyles({
+
+})
