@@ -24,7 +24,7 @@ const useStyles = makeStyles({
         // margin: 'auto',
         '&:hover':{
           backgroundColor: "#F3F3F3",
-          boxShadow: "0.8rem 0.8rem 0.5rem #e2e3e5, -0.6rem -0.4rem 0.5rem #f3f4f5",
+          boxShadow: "0.6rem 0.6rem 0.5rem #FBD1E6, -0.6rem -0.4rem 0.5rem #f3f4f5",
         }
       },
       topcard:{
