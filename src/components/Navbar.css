@@ -1,0 +1,13 @@
+.collapse{
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.nav-link{
+    font-size: 20px;
+}
+
+.nav-item{
+    font-size: 20px;
+    padding-left: 2rem;
+}

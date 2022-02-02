@@ -1,26 +1,25 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function NewsApi() {
   const [news, setNews] = useState([]);
 
-  useEffect( () => {
-     axios
-      .get(
-        "https://newsapi.org/v2/everything?qInTitle=crypto&sortBy=popularity&apiKey=ed82c3c548024e7bb58f1a4e07ac26b1"
-      )
-      .then((response) => {
-        setNews(response.data.articles);
-        console.log(response.data);
-      })
-      .catch(Error);
-  }, []);
+  useEffect(() => {
+    const fetchNews = async () => {
+      const { data } = await axios.get(
+        "https://newsdata.io/api/1/news?apikey=pub_40386eb420e308399a3d2ba448eb31a1982d&qInTitle=crypto&language=en"
+      );
 
-  console.log(news);
+      console.log(data.results);
+      setNews(data.results);
+    };
+
+    fetchNews();
+  }, []);
 
   return (
     <>
-      <div className="container mt-4">
+      <div className="container  mt-4">
         <div className=" text-center">
           <h3>News articles related to crypto </h3>
         </div>
@@ -31,7 +30,7 @@ function NewsApi() {
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img
-                      src={value.urlToImage}
+                      src={value.image_url}
                       className="img-fluid rounded-start"
                       alt="..."
                     />
@@ -44,16 +43,16 @@ function NewsApi() {
                           {value.description}
                         </small>
                       </p>
-                      <p className="card-text">{value.content}</p>
+                      {/* <p className="card-text">{value.content}</p> */}
                       <button className="btn btn-info">
-                        <a href={value.url} target="blank">
+                        <a href={value.link} target="blank">
                           Read More
                         </a>
                       </button>
                       <p className="card-text">
                         <small className="text-muted ">
-                          {value.author}
-                          <p>Published on :{value.publishedAt}</p>
+                          {value.creator}
+                          <p>Published on :{value.pubDate}</p>
                         </small>
                       </p>
                     </div>

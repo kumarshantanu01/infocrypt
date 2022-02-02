@@ -60,6 +60,7 @@ const useStyles = makeStyles({
       cardmarketcap:{
         fontWeight: "100",
         fontSize: "20px",
+        fontFamily: "",
         textShadow: "0.6rem 0.6rem 0.5rem #e2e3e5, -0.6rem -0.4rem 0.5rem #f3f4f5",
       }
     
