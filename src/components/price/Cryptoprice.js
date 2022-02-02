@@ -37,7 +37,7 @@ function Cryptoprice() {
 
   return (
     <div>
-      <h1>live prices will be displayed here</h1>
+      <h1 className={classes.heading}>Live price of top Cryptocurrencies</h1>
       <div >
         <Coincard coins={coins} dataisloaded={dataisloaded} />
       </div>
@@ -49,5 +49,14 @@ export default Cryptoprice;
 
 
 const useStyles = makeStyles({
-
+  heading:{
+    textAlign: "center",
+    color: "#444545",
+    fontFamily: "",
+    fontSize: "40px",
+    fontWeight: 600,
+    paddingTop: "2rem",
+    textShadow: "0.6rem 0.6rem 0.5rem #DEDEDF, -0.6rem -0.4rem 0.5rem #f3f4f5",
+    // textDecoration: "underline"
+  }
 })

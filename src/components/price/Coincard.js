@@ -21,21 +21,42 @@ const useStyles = makeStyles({
         justifyContent: "center",
         boxShadow: "0.6rem 0.6rem 0.5rem #e2e3e5, -0.6rem -0.4rem 0.5rem #f3f4f5"
         // margin: 'auto',
-    },
-    topcard:{
-
-    },
-    coinimage:{
+      },
+      topcard:{
+        
+      },
+      coinimage:{
         width: 85, 
         height: 85,
         margin: "0.4rem",
-    },
-    bottomcard:{
+      },
+      bottomcard:{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-    }
+      },
+      cardheading:{
+        fontSize: "35px",
+        fontFamily: "",
+        fontWeight: "bold",
+        textShadow: "0.6rem 0.6rem 0.5rem #DEDEDF, -0.6rem -0.4rem 0.5rem #f3f4f5",
+      },
+      cardsymbol:{
+        fontSize: "23px",
+        color: "#444545",
+        textShadow: "0.6rem 0.6rem 0.5rem #E0E1E2, -0.6rem -0.4rem 0.5rem #f3f4f5",
+      },
+      cardprice:{
+        fontSize: "20px",
+        paddingTop:"1rem",
+        textShadow: "0.6rem 0.6rem 0.5rem #e2e3e5, -0.6rem -0.4rem 0.5rem #f3f4f5",
+      },
+      cardmarketcap:{
+        fontWeight: "100",
+        fontSize: "20px",
+        textShadow: "0.6rem 0.6rem 0.5rem #e2e3e5, -0.6rem -0.4rem 0.5rem #f3f4f5",
+      }
     
 });
 
@@ -51,10 +72,10 @@ function Coincard(props) {
                     <img className={classes.coinimage} src={coin.iconUrl} alt="errorloadingimage"></img>
                 </div>
                 <div className={classes.bottomcard}>
-                    <h1>{coin.name}</h1>
-                    <h2>{coin.symbol}</h2>
-                    <p>Price : {coin.price}</p>
-                    <p>Market Cap : {coin.marketCap}</p>
+                    <h1 className={classes.cardheading}>{coin.name}</h1>
+                    <h2 className={classes.cardsymbol}>({coin.symbol})</h2>
+                    <p className={classes.cardprice}>Price : {coin.price}</p>
+                    <p className={classes.cardmarketcap}>Market Cap : {coin.marketCap}</p>
                 </div>
               </div>
             );
