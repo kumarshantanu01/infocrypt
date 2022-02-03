@@ -14,15 +14,15 @@ function Newscard(props) {
                     <CardContent className={classes.container}>
                         <Grid container>
                             <Grid lg={5} md={5} sm={5} xs={12} item>
-                                <img src={value.urlToImage} alt="png" className={classes.image} />
+                                <img src={value.image_url} alt="png" className={classes.image} />
                             </Grid>
                             <Grid lg={7} md={7} sm={7} xs={12} item className={classes.rightContainer}>
                                 <Typography className={classes.title}>{value.title}</Typography>
                                 <Typography className={classes.author}>
-                                    <b className={classes.newsarticle}>News</b> by {value.author} / {new Date(value.publishedAt).toDateString()}
+                                    <b className={classes.newsarticle}>News</b> by {value.creator} / {new Date(value.pubDate).toDateString()}
                                 </Typography>
-                                <Typography className={classes.description}>{value.content}</Typography>
-                                <a href={value.url} target='_blank' rel="noreferrer" className={classes.link}  >
+                                <Typography className={classes.description}>{value.description}</Typography>
+                                <a href={value.link} target='_blank' rel="noreferrer" className={classes.link}  >
                                     <Button className={classes.button} >
                                         Read more
                                     </Button>
@@ -93,10 +93,15 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "'Convergence', sans-serif"
     },
     button:{
-        textDecoration: "none",background: "#212529", color: "#DD79AA", width:'120px', marginTop: '2rem', marginRight: "1rem", padding: '0.6rem' 
+        textDecoration: "none",background: "#212529", color: "#DD79AA", width:'120px', marginTop: '2rem', marginRight: "1rem", padding: '0.6rem',
+        "&:hover":{
+            background: "#212529",
+        } 
     },
     link: {
         textDecoration: 'none',
         paddingBottom: "1rem",
+        width: "120px",
+        
     }
 }))

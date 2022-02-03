@@ -8,19 +8,18 @@ function NewsApi() {
   const classes = useStyles();
   const [news, setNews] = useState([]);
 
-  useEffect( () => {
-     axios
-      .get(
-        "https://newsapi.org/v2/everything?qInTitle=crypto&sortBy=publishedAt&apiKey=ed82c3c548024e7bb58f1a4e07ac26b1"
-      )
-      .then((response) => {
-        setNews(response.data.articles);
-        console.log(response.data);
-      })
-      .catch(Error);
-  }, []);
+  useEffect(() => {
+    const fetchNews = async () => {
+      const { data } = await axios.get(
+        "https://newsdata.io/api/1/news?apikey=pub_40386eb420e308399a3d2ba448eb31a1982d&qInTitle=crypto&language=en"
+      );
 
-  console.log(news);
+      console.log(data.results);
+      setNews(data.results);
+    };
+
+    fetchNews();
+  }, []);
 
   return (
     <>
