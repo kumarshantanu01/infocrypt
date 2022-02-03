@@ -40,7 +40,7 @@ const useStyles = makeStyles({
   footersubheading: {
     fontSize: "20px",
     color: "#f2f2f2",
-    fontWeight: "400",
+    fontWeight: "100",
   },
   footercopyright: {
     fontWeight: "100",

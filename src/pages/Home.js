@@ -26,9 +26,7 @@ function Home() {
           </Link>
         </div>
       </Box>
-      <Box
-          style={{ width: "50vw", height: "90vh", backgroundColor: "#212529" }}
-        >
+      <Box className={classes.imagebox}>
           <img
             src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1643811454/6929da1d074844aa39ef45dfdefa8980_mztnag.webp"
             alt=""
@@ -47,6 +45,11 @@ const useStyles = makeStyles({
   box:{
       display: 'flex',
       height: '90vh',
+      "@media (max-width: 750px)": {
+        display: 'flex',
+      flexDirection: 'column',
+      }
+      
   },
   container1:{
       display: 'flex',
@@ -57,6 +60,17 @@ const useStyles = makeStyles({
       paddingBottom: '4rem' ,
       paddingLeft: '3rem',
       width: '50vw',
+      "@media (max-width: 750px)": {
+        width: "100%",
+        height: "70vh",
+      }
+  },
+  imagebox:{
+    width: "50vw", height: "90vh", backgroundColor: "#212529",
+    "@media (max-width: 750px)": {
+      width: "100%",
+      height: "30vh",
+    }
   },
   homesubheading:{
     fontWeight: "lighter",
