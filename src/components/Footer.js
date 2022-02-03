@@ -1,5 +1,24 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
+
+function Footer() {
+  const classes = useStyles();
+  return (
+    <div>
+      <div className={classes.footer}>
+        <h1 className={classes.footerheading}>InfoCrypt</h1>
+        <h2 className={classes.footersubheading}>
+          Your one stop solution for live price and latest news related to
+          crypto.
+        </h2>
+        <h4 className={classes.footercopyright}>© 2022 Copyright</h4>
+      </div>
+    </div>
+  );
+}
+
+export default Footer;
+
 const useStyles = makeStyles({
   footer: {
     height: "11rem",
@@ -30,21 +49,3 @@ const useStyles = makeStyles({
     color: "#f2f2f2",
   },
 });
-
-function Footer() {
-  const classes = useStyles();
-  return (
-    <div>
-      <div className={classes.footer}>
-        <h1 className={classes.footerheading}>InfoCrypt</h1>
-        <h2 className={classes.footersubheading}>
-          Your one stop solution for live price and latest news related to
-          crypto.
-        </h2>
-        <h4 className={classes.footercopyright}>© 2022 Copyright</h4>
-      </div>
-    </div>
-  );
-}
-
-export default Footer;

@@ -2,33 +2,6 @@ import { makeStyles } from "@mui/styles";
 import React from "react";
 import { Box, Button,   } from "@mui/material";
 import { Link } from "react-router-dom";
-const useStyles = makeStyles({
-  box:{
-      display: 'flex',
-      height: '90vh',
-  },
-  container1:{
-      display: 'flex',
-      flexDirection: 'column',
-      backgroundColor: "#F0F0F0",
-      alignItems: 'start',
-      justifyContent: 'center',
-      paddingBottom: '4rem' ,
-      paddingLeft: '3rem',
-      width: '50vw',
-  },
-  homesubheading:{
-    fontWeight: "lighter",
-    paddingTop: "1rem",
-  },
-  buttonbox:{
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  textcontainer:{
-    width: "80%",
-  }
-})
 
 function Home() {
   const classes = useStyles();
@@ -69,3 +42,31 @@ function Home() {
 }
 
 export default Home;
+
+const useStyles = makeStyles({
+  box:{
+      display: 'flex',
+      height: '90vh',
+  },
+  container1:{
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: "#F0F0F0",
+      alignItems: 'start',
+      justifyContent: 'center',
+      paddingBottom: '4rem' ,
+      paddingLeft: '3rem',
+      width: '50vw',
+  },
+  homesubheading:{
+    fontWeight: "lighter",
+    paddingTop: "1rem",
+  },
+  buttonbox:{
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  textcontainer:{
+    width: "80%",
+  }
+})
