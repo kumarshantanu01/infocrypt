@@ -2,45 +2,6 @@
 import React from "react";
 import { Card, CardContent, makeStyles, Grid, Typography, Button } from "@material-ui/core";
 
-function Newscard(props) {
-    const classes = useStyles();
-  return (
-    <div>
-      <div className={classes.newscontainer}>
-          {props.news.map((value) => {
-            return (
-                <>
-                <Card className={classes.component}>
-                    <CardContent className={classes.container}>
-                        <Grid container>
-                            <Grid lg={5} md={5} sm={5} xs={12} item>
-                                <img src={value.image_url} alt="png" className={classes.image} />
-                            </Grid>
-                            <Grid lg={7} md={7} sm={7} xs={12} item className={classes.rightContainer}>
-                                <Typography className={classes.title}>{value.title}</Typography>
-                                <Typography className={classes.author}>
-                                    <b className={classes.newsarticle}>News</b> by {value.creator} / {new Date(value.pubDate).toDateString()}
-                                </Typography>
-                                <Typography className={classes.description}>{value.description}</Typography>
-                                <a href={value.link} target='_blank' rel="noreferrer" className={classes.link}  >
-                                    <Button className={classes.button} >
-                                        Read more
-                                    </Button>
-                                </a>
-                            </Grid>
-                        </Grid>
-                    </CardContent>
-                </Card>
-                </>
-            );
-          })}
-        </div>
-    </div>
-  );
-}
-
-export default Newscard;
-
 const useStyles = makeStyles(theme => ({
     component: {
         boxShadow: '0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%)',
@@ -105,3 +66,43 @@ const useStyles = makeStyles(theme => ({
         
     }
 }))
+
+function Newscard(props) {
+    const classes = useStyles();
+  return (
+    <div>
+      <div className={classes.newscontainer}>
+          {props.news.map((value) => {
+            return (
+                <>
+                <Card className={classes.component}>
+                    <CardContent className={classes.container}>
+                        <Grid container>
+                            <Grid lg={5} md={5} sm={5} xs={12} item>
+                                <img src={value.image_url} alt="png" className={classes.image} />
+                            </Grid>
+                            <Grid lg={7} md={7} sm={7} xs={12} item className={classes.rightContainer}>
+                                <Typography className={classes.title}>{value.title}</Typography>
+                                <Typography className={classes.author}>
+                                    <b className={classes.newsarticle}>News</b> by {value.creator} / {new Date(value.pubDate).toDateString()}
+                                </Typography>
+                                <Typography className={classes.description}>{value.description}</Typography>
+                                <a href={value.link} target='_blank' rel="noreferrer" className={classes.link}  >
+                                    <Button className={classes.button} >
+                                        Read more
+                                    </Button>
+                                </a>
+                            </Grid>
+                        </Grid>
+                    </CardContent>
+                </Card>
+                </>
+            );
+          })}
+        </div>
+    </div>
+  );
+}
+
+export default Newscard;
+

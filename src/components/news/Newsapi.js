@@ -4,6 +4,19 @@ import React, { useState, useEffect } from "react";
 // import Coincard from "../price/Coincard";
 import Newscard from "./Newscard";
 
+const useStyles = makeStyles({
+  heading: {
+    textAlign: "center",
+    color: "#444545",
+    fontFamily: "",
+    fontSize: "40px",
+    fontWeight: 600,
+    paddingBottom: "2rem",
+    textShadow: "0.6rem 0.6rem 0.5rem #DEDEDF, -0.6rem -0.4rem 0.5rem #f3f4f5",
+    // textDecoration: "underline"
+  },
+});
+
 function NewsApi() {
   const classes = useStyles();
   const [news, setNews] = useState([]);
@@ -35,15 +48,3 @@ function NewsApi() {
 
 export default NewsApi;
 
-const useStyles = makeStyles({
-  heading: {
-    textAlign: "center",
-    color: "#444545",
-    fontFamily: "",
-    fontSize: "40px",
-    fontWeight: 600,
-    paddingBottom: "2rem",
-    textShadow: "0.6rem 0.6rem 0.5rem #DEDEDF, -0.6rem -0.4rem 0.5rem #f3f4f5",
-    // textDecoration: "underline"
-  },
-});
