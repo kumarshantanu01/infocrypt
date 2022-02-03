@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Prices from "./pages/Prices";
+console.log(process.env.REACT_APP_API_KEY)
 
 function App() {
   return (
