@@ -1,31 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
 
-function Coincard(props) {
- const classes = useStyles();
-  return (
-    <div className={classes.cardssection}>
-      {props.dataisloaded
-        ? props.coins.map((coin) => {
-            return (
-              <div className={classes.coincard}>
-                <div className={classes.topcard}>
-                    <img className={classes.coinimage} src={coin.iconUrl} alt="errorloadingimage"></img>
-                </div>
-                <div className={classes.bottomcard}>
-                    <h1 className={classes.cardheading}>{coin.name}</h1>
-                    <h2 className={classes.cardsymbol}>({coin.symbol})</h2>
-                    <p className={classes.cardprice}>Price : {coin.price}</p>
-                    <p className={classes.cardmarketcap}>Market Cap : {coin.marketCap}</p>
-                </div>
-              </div>
-            );
-          })
-        : ""}
-    </div>
-  );
-}
-
 export default Coincard;
 
 const useStyles = makeStyles({
@@ -92,3 +67,30 @@ const useStyles = makeStyles({
     }
   
 });
+
+function Coincard(props) {
+ const classes = useStyles();
+  return (
+    <div className={classes.cardssection}>
+      {props.dataisloaded
+        ? props.coins.map((coin) => {
+            return (
+              <div className={classes.coincard}>
+                <div className={classes.topcard}>
+                    <img className={classes.coinimage} src={coin.iconUrl} alt="errorloadingimage"></img>
+                </div>
+                <div className={classes.bottomcard}>
+                    <h1 className={classes.cardheading}>{coin.name}</h1>
+                    <h2 className={classes.cardsymbol}>({coin.symbol})</h2>
+                    <p className={classes.cardprice}>Price : {coin.price}</p>
+                    <p className={classes.cardmarketcap}>Market Cap : {coin.marketCap}</p>
+                </div>
+              </div>
+            );
+          })
+        : ""}
+    </div>
+  );
+}
+
+

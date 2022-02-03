@@ -2,6 +2,19 @@ import { makeStyles } from "@mui/styles";
 import React, { useEffect, useState } from "react";
 import Coincard from "./Coincard";
 
+const useStyles = makeStyles({
+  heading: {
+    textAlign: "center",
+    color: "#444545",
+    fontFamily: "",
+    fontSize: "40px",
+    fontWeight: 600,
+    paddingTop: "2rem",
+    textShadow: "0.6rem 0.6rem 0.5rem #DEDEDF, -0.6rem -0.4rem 0.5rem #f3f4f5",
+    // textDecoration: "underline"
+  },
+});
+
 // import axios from "axios";
 function Cryptoprice() {
   const classes = useStyles();
@@ -46,15 +59,4 @@ function Cryptoprice() {
 
 export default Cryptoprice;
 
-const useStyles = makeStyles({
-  heading: {
-    textAlign: "center",
-    color: "#444545",
-    fontFamily: "",
-    fontSize: "40px",
-    fontWeight: 600,
-    paddingTop: "2rem",
-    textShadow: "0.6rem 0.6rem 0.5rem #DEDEDF, -0.6rem -0.4rem 0.5rem #f3f4f5",
-    // textDecoration: "underline"
-  },
-});
+
