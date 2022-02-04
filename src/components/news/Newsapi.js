@@ -25,7 +25,7 @@ function NewsApi() {
     const fetchNews = async () => {
       const newsapikey = process.env.REACT_APP_NEWS_API_KEY;
       const { data } = await axios.get(
-        "https://newsdata.io/api/1/news?apikey=pub_"+{newsapikey}+"&qInTitle=crypto&language=en"
+        "https://newsdata.io/api/1/news?apikey=pub_"+newsapikey+"&qInTitle=crypto&language=en"
       );
 
       console.log(data.results);
