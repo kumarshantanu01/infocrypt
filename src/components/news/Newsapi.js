@@ -1,5 +1,5 @@
 import axios from "axios";
-import { makeStyles } from "@mui/styles";
+import { makeStyles } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 // import Coincard from "../price/Coincard";
 import Newscard from "./Newscard";
